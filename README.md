@@ -17,7 +17,7 @@ The page routes payment to the Solana wallet recorded in `payment-details.json`.
 
 Published page:
 
-https://jhuanxx44.github.io/five-dollar-solana-checkout/index.html
+https://jhuanxx44.github.io/five-dollar-solana-checkout/
 
 Open `index.html` in a browser, or host this folder as static files. Share the page with a buyer, or paste one of the outreach messages from the page into a relevant chat or marketplace thread.
 

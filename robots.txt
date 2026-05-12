@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jhuanxx44.github.io/five-dollar-solana-checkout/sitemap.xml
