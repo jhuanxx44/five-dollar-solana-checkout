@@ -15,6 +15,10 @@ The page routes payment to the Solana wallet recorded in `payment-details.json`.
 
 ## Use It
 
+Published page:
+
+https://jhuanxx44.github.io/five-dollar-solana-checkout/index.html
+
 Open `index.html` in a browser, or host this folder as static files. Share the page with a buyer, or paste one of the outreach messages from the page into a relevant chat or marketplace thread.
 
 Ask the buyer to pay 5 USDC on Solana, then send:
