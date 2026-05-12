@@ -4,6 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>5 USDC AI Teardown</title>
+    <meta
+      name="description"
+      content="Pay 5 USDC on Solana for a concise AI-assisted README or landing-page teardown."
+    />
+    <meta property="og:title" content="5 USDC AI README or Landing Page Teardown" />
+    <meta
+      property="og:description"
+      content="Get three specific fixes, one rewritten opening section, and a short priority checklist."
+    />
+    <meta property="og:url" content="https://jhuanxx44.github.io/five-dollar-solana-checkout/index.html" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
     <link rel="icon" href="data:," />
     <style>
       :root {
@@ -364,6 +376,52 @@
         min-height: 92px;
       }
 
+      .sample-section {
+        margin-top: 20px;
+      }
+
+      .sample-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+        gap: 16px;
+      }
+
+      .sample-block {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(251, 250, 247, 0.86);
+        padding: 18px;
+      }
+
+      .sample-block h3 {
+        margin-bottom: 10px;
+        font-size: 15px;
+      }
+
+      .sample-block p,
+      .sample-block li {
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .sample-block ul {
+        display: grid;
+        gap: 8px;
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      .rewrite {
+        border-left: 3px solid var(--gold);
+        margin-top: 12px;
+        padding-left: 12px;
+        color: var(--ink);
+        font-size: 17px;
+        font-weight: 720;
+        line-height: 1.45;
+      }
+
       .status {
         min-height: 18px;
         margin-top: 10px;
@@ -380,6 +438,7 @@
 
         .hero,
         .sections,
+        .sample-grid,
         .deliverables {
           grid-template-columns: 1fr;
         }
@@ -538,6 +597,27 @@ What I want improved most: clarity / conversion / trust / README quality</textar
             <h3>Freelance reply</h3>
             <textarea id="outreach-freelance" readonly>I can do a fast first-pass teardown for 5 USDC: clarity issues, trust gaps, one rewritten opening section, and the top edits I would make next. If that helps, send the URL and I will keep the feedback direct and practical.</textarea>
             <button type="button" data-copy="outreach-freelance">Copy reply</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section sample-section" aria-label="Sample teardown">
+        <h2>Sample teardown</h2>
+        <div class="sample-grid">
+          <div class="sample-block">
+            <h3>What I look for</h3>
+            <ul>
+              <li>Does the first screen say who the product is for?</li>
+              <li>Does the copy name a specific outcome instead of a broad feature?</li>
+              <li>Does the page give enough trust before asking for action?</li>
+            </ul>
+          </div>
+          <div class="sample-block">
+            <h3>Example rewrite</h3>
+            <p>Before: "A powerful AI tool for teams that want better productivity."</p>
+            <p class="rewrite">
+              After: "Turn messy customer notes into a prioritized bug list before your next standup."
+            </p>
           </div>
         </div>
       </section>
