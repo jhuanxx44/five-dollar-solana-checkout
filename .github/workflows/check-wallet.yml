@@ -1,0 +1,57 @@
+name: Check wallet receipt
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-wallet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check wallet
+        id: wallet
+        run: |
+          npm run check:wallet | tee wallet-check.txt
+          if grep -q "Goal met: yes" wallet-check.txt; then
+            echo "goal_met=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "goal_met=false" >> "$GITHUB_OUTPUT"
+          fi
+          {
+            echo "### Wallet check"
+            echo
+            echo '```'
+            cat wallet-check.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Open completion issue when funded
+        if: ${{ steps.wallet.outputs.goal_met == 'true' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          existing="$(gh issue list --search '5 USDC wallet goal met in:title' --json number --jq '.[0].number // empty')"
+          if [ -z "$existing" ]; then
+            gh issue create \
+              --title "5 USDC wallet goal met" \
+              --body-file wallet-check.txt
+          else
+            echo "Completion issue already exists: #$existing"
+          fi
