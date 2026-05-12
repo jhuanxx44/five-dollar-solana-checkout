@@ -1,0 +1,13 @@
+{
+  "name": "five-dollar-solana-checkout",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate:payment": "node scripts/generate-payment-assets.mjs",
+    "check:wallet": "node scripts/check-solana-wallet.mjs"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  }
+}

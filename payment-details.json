@@ -1,0 +1,11 @@
+{
+  "network": "solana-mainnet",
+  "recipient": "GNdNNmfLWSLmMJHf96cvjEHXfyPWDQExNQFUAUQJJwYW",
+  "usdcMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+  "tokenSymbol": "USDC",
+  "amount": "5",
+  "label": "Five Dollar AI Teardown",
+  "message": "Payment for one AI README or landing-page teardown",
+  "memo": "five-dollar-ai-teardown",
+  "paymentUrl": "solana:GNdNNmfLWSLmMJHf96cvjEHXfyPWDQExNQFUAUQJJwYW?amount=5&spl-token=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&label=Five+Dollar+AI+Teardown&message=Payment+for+one+AI+README+or+landing-page+teardown&memo=five-dollar-ai-teardown"
+}
